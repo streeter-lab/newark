@@ -952,7 +952,7 @@ body.nav-open {
 }
 
 /* ============================================
-   19. FAQ Accordion
+   18. FAQ Accordion
    ============================================ */
 .faq-list {
   max-width: 700px;
@@ -998,7 +998,7 @@ body.nav-open {
 }
 
 /* ============================================
-   20. Events
+   19. Events
    ============================================ */
 .event-featured {
   display: grid;
@@ -1059,7 +1059,7 @@ body.nav-open {
 }
 
 /* ============================================
-   21. Footer
+   20. Footer
    ============================================ */
 .site-footer {
   background-color: var(--color-stone-900);
@@ -1126,7 +1126,7 @@ body.nav-open {
 }
 
 /* ============================================
-   22. 404 Page
+   21. 404 Page
    ============================================ */
 .page-404 {
   text-align: center;
@@ -1158,7 +1158,7 @@ body.nav-open {
 }
 
 /* ============================================
-   23. Responsive — Tablet (768px+)
+   22. Responsive — Tablet (768px+)
    ============================================ */
 @media (min-width: 768px) {
   .container {
@@ -1210,7 +1210,7 @@ body.nav-open {
 }
 
 /* ============================================
-   24. Responsive — Desktop (1024px+)
+   23. Responsive — Desktop (1024px+)
    ============================================ */
 @media (min-width: 1024px) {
   .main-nav {
@@ -1235,7 +1235,7 @@ body.nav-open {
 }
 
 /* ============================================
-   25. Focus Styles
+   24. Focus Styles
    ============================================ */
 :focus-visible {
   outline: 2px solid var(--color-river-500);
@@ -1250,7 +1250,7 @@ a:focus-visible {
 }
 
 /* ============================================
-   26. Animations & Reduced Motion
+   25. Animations & Reduced Motion
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1264,7 +1264,7 @@ a:focus-visible {
 }
 
 /* ============================================
-   27. Print Styles
+   26. Print Styles
    ============================================ */
 @media print {
   .site-header,

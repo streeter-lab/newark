@@ -19,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  {% if twitterTitle %}<meta name="twitter:title" content="{{ twitterTitle }}">
-  <meta name="twitter:description" content="{{ twitterDescription }}">{% endif %}
+  {% if twitterTitle %}<meta name="twitter:title" content="{{ twitterTitle }}">{% endif %}
+  {% if twitterDescription %}<meta name="twitter:description" content="{{ twitterDescription }}">{% endif %}
   {% else %}
   <meta name="robots" content="noindex">
   {% endif %}
