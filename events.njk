@@ -10,11 +10,18 @@ activeNav: "events"
 permalink: /events.html
 structuredData: |
   <script type="application/ld+json">
-  [{
+  {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Newark International Antiques & Collectors Fair",
     "description": "One of Europe's largest antiques and collectors fairs with over 2,000 stalls.",
+    "startDate": "2026-03-01",
+    "eventSchedule": {
+      "@type": "Schedule",
+      "repeatFrequency": "P2M",
+      "repeatCount": 6
+    },
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
       "@type": "Place",
       "name": "Newark Showground",
@@ -25,12 +32,17 @@ structuredData: |
         "addressCountry": "GB"
       }
     }
-  },
+  }
+  </script>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Newark Festival",
     "description": "A week-long celebration of music, arts, and community in Newark-on-Trent.",
+    "startDate": "2026-06-13",
+    "endDate": "2026-06-21",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
       "@type": "Place",
       "name": "Newark-on-Trent Town Centre",
@@ -41,7 +53,7 @@ structuredData: |
         "addressCountry": "GB"
       }
     }
-  }]
+  }
   </script>
 ---
 
