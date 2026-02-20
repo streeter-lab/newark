@@ -952,66 +952,6 @@ body.nav-open {
 }
 
 /* ============================================
-   18. Contact Form
-   ============================================ */
-.contact-form {
-  max-width: 640px;
-}
-
-.form-group {
-  margin-bottom: var(--space-lg);
-}
-
-.form-group label {
-  display: block;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-xs);
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  color: var(--text-primary);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: var(--color-river-500);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.form-success {
-  padding: var(--space-md) var(--space-lg);
-  background: var(--color-green-50);
-  border: 1px solid var(--color-green-200);
-  border-radius: var(--border-radius);
-  color: var(--color-green-700);
-  font-size: var(--font-size-sm);
-  margin-top: var(--space-md);
-}
-
-[data-theme="dark"] .form-success {
-  background: rgba(34, 197, 94, 0.1);
-  border-color: rgba(34, 197, 94, 0.2);
-  color: var(--color-green-300);
-}
-
-/* ============================================
    19. FAQ Accordion
    ============================================ */
 .faq-list {
@@ -1173,32 +1113,6 @@ body.nav-open {
   color: #fff;
 }
 
-.social-links {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-stone-300);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-.social-link svg {
-  width: 20px;
-  height: 20px;
-}
 
 .footer-bottom {
   padding-top: var(--space-xl);
