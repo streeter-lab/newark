@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description }}">
+  {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+
+  {% if not is404 %}
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ ogTitle or title }}">
+  <meta property="og:description" content="{{ ogDescription or description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ canonical or page.url }}">
+  <meta property="og:image" content="{{ site.url }}/images/og-image.svg">
+  {% if ogImageAlt %}<meta property="og:image:alt" content="{{ ogImageAlt }}">{% endif %}
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  {% if twitterTitle %}<meta name="twitter:title" content="{{ twitterTitle }}">
+  <meta name="twitter:description" content="{{ twitterDescription }}">{% endif %}
+  {% else %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+
+  <title>{{ title }}</title>
+
+  {% if not is404 %}<link rel="canonical" href="{{ site.url }}{{ canonical or page.url }}">{% endif %}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+
+  {% if structuredData %}{{ structuredData | safe }}{% endif %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Newark-on-Trent — Home">
+        <span class="logo-text">Newark<span class="logo-accent">-on-Trent</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link"{% if activeNav == "home" %} aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="/about.html" class="nav-link"{% if activeNav == "about" %} aria-current="page"{% endif %}>About</a></li>
+          <li><a href="/things-to-do.html" class="nav-link"{% if activeNav == "things-to-do" %} aria-current="page"{% endif %}>Things To Do</a></li>
+          <li><a href="/visitor-info.html" class="nav-link"{% if activeNav == "visitor-info" %} aria-current="page"{% endif %}>Visitor Info</a></li>
+          <li><a href="/local-life.html" class="nav-link"{% if activeNav == "local-life" %} aria-current="page"{% endif %}>Local Life</a></li>
+          <li><a href="/events.html" class="nav-link"{% if activeNav == "events" %} aria-current="page"{% endif %}>Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Newark-on-Trent</h3>
+          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside.{% if not is404 %} This community website aims to be your go-to guide for everything Newark.{% endif %}</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about.html">About Newark</a></li>
+            <li><a href="/things-to-do.html">Things To Do</a></li>
+            <li><a href="/visitor-info.html">Visitor Info</a></li>
+            <li><a href="/events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="/local-life.html">Local Life</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved.{% if not is404 %} This is a community information website.{% endif %}</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

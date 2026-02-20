@@ -1,70 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Plan your visit to Newark-on-Trent. Travel by train, car or bus, parking information, accommodation options, and everything you need for a great trip.">
-  <meta name="keywords" content="Newark-on-Trent visitor information, getting to Newark, Newark parking, Newark accommodation, Newark train station">
-
-  <meta property="og:title" content="Visitor Information — Newark-on-Trent">
-  <meta property="og:description" content="Plan your visit to Newark-on-Trent. Travel, parking, accommodation and essential visitor information.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://newark-on-trent.com/visitor-info.html">
-  <meta property="og:image" content="https://newark-on-trent.com/images/og-image.jpg">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:site_name" content="Newark-on-Trent">
-
-  <meta name="twitter:card" content="summary_large_image">
-
-  <title>Visitor Information — Plan Your Visit to Newark-on-Trent</title>
-
-  <link rel="canonical" href="https://newark-on-trent.com/visitor-info.html">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/styles.css">
-
-  <script>
-    (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
-  </script>
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="site-logo" aria-label="Newark-on-Trent — Home">
-        <span class="logo-text">Newark<span class="logo-accent">-on-Trent</span></span>
-      </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/about.html" class="nav-link">About</a></li>
-          <li><a href="/things-to-do.html" class="nav-link">Things To Do</a></li>
-          <li><a href="/visitor-info.html" class="nav-link" aria-current="page">Visitor Info</a></li>
-          <li><a href="/local-life.html" class="nav-link">Local Life</a></li>
-          <li><a href="/events.html" class="nav-link">Events</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main-content">
+---
+layout: base.njk
+title: "Visitor Information — Plan Your Visit to Newark-on-Trent"
+description: "Plan your visit to Newark-on-Trent. Travel by train, car or bus, parking information, accommodation options, and everything you need for a great trip."
+keywords: "Newark-on-Trent visitor information, getting to Newark, Newark parking, Newark accommodation, Newark train station"
+ogTitle: "Visitor Information — Newark-on-Trent"
+ogDescription: "Plan your visit to Newark-on-Trent. Travel, parking, accommodation and essential visitor information."
+canonical: "/visitor-info.html"
+activeNav: "visitor-info"
+permalink: /visitor-info.html
+---
 
     <section class="hero hero--page">
       <div class="container hero__content">
@@ -221,13 +165,16 @@
           <p>Newark-on-Trent is located in Nottinghamshire, East Midlands, England.</p>
         </div>
 
-        <div class="map-placeholder">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-          <h3>Interactive Map</h3>
-          <p>An interactive map of Newark-on-Trent town centre will be available here soon.</p>
-          <p>Newark-on-Trent is located at approximately 53.08°N, 0.81°W, in the heart of Nottinghamshire.</p>
+        <div class="map-container">
+          <iframe
+            title="Map of Newark-on-Trent town centre"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19246.68284584!2d-0.8227!3d53.0764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b7c4bf07b4a7%3A0x11a2e8e69a83efb0!2sNewark-on-Trent!5e0!3m2!1sen!2suk!4v1"
+            width="100%"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrading">
+          </iframe>
         </div>
       </div>
     </section>
@@ -259,47 +206,3 @@
         </div>
       </div>
     </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <h3>Newark-on-Trent</h3>
-          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside. This community website aims to be your go-to guide for everything Newark.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/about.html">About Newark</a></li>
-            <li><a href="/things-to-do.html">Things To Do</a></li>
-            <li><a href="/visitor-info.html">Visitor Info</a></li>
-            <li><a href="/events.html">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="/local-life.html">Local Life</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-            <a href="#" aria-label="X (Twitter)" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved. This is a community information website.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js" defer></script>
-</body>
-</html>
