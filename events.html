@@ -1,14 +1,40 @@
----
-layout: base.njk
-title: "Events — What's On in Newark-on-Trent"
-description: "What's on in Newark-on-Trent. Events, festivals, markets, antiques fairs, theatre shows, and community celebrations throughout the year."
-keywords: "Newark-on-Trent events, Newark Festival, Newark Antiques Fair, Newark Christmas Market, Newark market days"
-ogTitle: "Events — What's On in Newark-on-Trent"
-ogDescription: "Events, festivals, markets, and community celebrations in Newark-on-Trent throughout the year."
-canonical: "/events.html"
-activeNav: "events"
-permalink: /events.html
-structuredData: |
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What's on in Newark-on-Trent. Events, festivals, markets, antiques fairs, theatre shows, and community celebrations throughout the year.">
+  <meta name="keywords" content="Newark-on-Trent events, Newark Festival, Newark Antiques Fair, Newark Christmas Market, Newark market days">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Events — What's On in Newark-on-Trent">
+  <meta property="og:description" content="Events, festivals, markets, and community celebrations in Newark-on-Trent throughout the year.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://newark-on-trent.com/events.html">
+  <meta property="og:image" content="https://newark-on-trent.com/images/og-image.svg">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Newark-on-Trent">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Events — What's On in Newark-on-Trent</title>
+
+  <link rel="canonical" href="https://newark-on-trent.com/events.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,7 +81,47 @@ structuredData: |
     }
   }
   </script>
----
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Newark-on-Trent — Home">
+        <span class="logo-text">Newark<span class="logo-accent">-on-Trent</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/things-to-do.html" class="nav-link">Things To Do</a></li>
+          <li><a href="/visitor-info.html" class="nav-link">Visitor Info</a></li>
+          <li><a href="/local-life.html" class="nav-link">Local Life</a></li>
+          <li><a href="/events.html" class="nav-link" aria-current="page">Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
 
     <section class="hero hero--page">
       <div class="container hero__content">
@@ -73,12 +139,7 @@ structuredData: |
 
         <div class="event-featured">
           <div class="feature-split__image">
-            <div class="image-placeholder" role="img" aria-label="Thousands of stalls at the Newark International Antiques and Collectors Fair">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <rect width="600" height="400" fill="#e0d8cc"/>
-                <text x="300" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#9a8468">Newark International Antiques Fair</text>
-              </svg>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Thousands of stalls at the Newark International Antiques and Collectors Fair">
           </div>
           <div class="event-featured__content">
             <span class="event-date">
@@ -104,14 +165,7 @@ structuredData: |
 
         <div class="grid grid--3">
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Live music performance at Newark Festival">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#dbeafe"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#2563eb">Newark Festival</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Live music performance at Newark Festival" class="card__image">
             <div class="card__body">
               <span class="card__badge">Summer</span>
               <h3 class="card__title">Newark Festival</h3>
@@ -124,14 +178,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Civil War re-enactment with soldiers in period costume at Newark Castle">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#fef3c7"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#92400e">Civil War Re-enactment</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Civil War re-enactment with soldiers in period costume at Newark Castle" class="card__image">
             <div class="card__body">
               <span class="card__badge">Summer</span>
               <h3 class="card__title">Civil War Re-enactments</h3>
@@ -144,14 +191,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Festive lights and market stalls at Newark Christmas Market">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#dcfce7"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#15803d">Christmas Market</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Festive lights and market stalls at Newark Christmas Market" class="card__image">
             <div class="card__body">
               <span class="card__badge">Winter</span>
               <h3 class="card__title">Newark Christmas Market</h3>
@@ -164,14 +204,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Fresh produce at Newark Farmers Market">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#f0fdf4"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#15803d">Farmers Market</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Fresh produce at Newark Farmers Market" class="card__image">
             <div class="card__body">
               <span class="card__badge">Monthly</span>
               <h3 class="card__title">Newark Farmers Market</h3>
@@ -184,14 +217,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Performance on stage at the Palace Theatre Newark">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#fce7f3"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9d174d">Palace Theatre</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Performance on stage at the Palace Theatre Newark" class="card__image">
             <div class="card__body">
               <span class="card__badge">Year-round</span>
               <h3 class="card__title">Palace Theatre Shows</h3>
@@ -204,14 +230,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Castle gardens event with visitors enjoying the grounds">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#eff6ff"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#1d4ed8">Castle Events</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Castle gardens event with visitors enjoying the grounds" class="card__image">
             <div class="card__body">
               <span class="card__badge">Seasonal</span>
               <h3 class="card__title">Castle &amp; Heritage Events</h3>
@@ -274,3 +293,45 @@ structuredData: |
         </div>
       </div>
     </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Newark-on-Trent</h3>
+          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside. This community website aims to be your go-to guide for everything Newark.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about.html">About Newark</a></li>
+            <li><a href="/things-to-do.html">Things To Do</a></li>
+            <li><a href="/visitor-info.html">Visitor Info</a></li>
+            <li><a href="/events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="/local-life.html">Local Life</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:admin@newark-on-trent.com">admin@newark-on-trent.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved. This is a community information website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

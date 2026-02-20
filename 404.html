@@ -3,31 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ description }}">
-  {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
-
-  {% if not is404 %}
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ ogTitle or title }}">
-  <meta property="og:description" content="{{ ogDescription or description }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}{{ canonical or page.url }}">
-  <meta property="og:image" content="{{ site.url }}/images/og-image.svg">
-  {% if ogImageAlt %}<meta property="og:image:alt" content="{{ ogImageAlt }}">{% endif %}
-  <meta property="og:locale" content="{{ site.locale }}">
-  <meta property="og:site_name" content="{{ site.name }}">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  {% if twitterTitle %}<meta name="twitter:title" content="{{ twitterTitle }}">{% endif %}
-  {% if twitterDescription %}<meta name="twitter:description" content="{{ twitterDescription }}">{% endif %}
-  {% else %}
+  <meta name="description" content="Page not found — Newark-on-Trent community website.">
   <meta name="robots" content="noindex">
-  {% endif %}
 
-  <title>{{ title }}</title>
+  <title>Page Not Found — Newark-on-Trent</title>
 
-  {% if not is404 %}<link rel="canonical" href="{{ site.url }}{{ canonical or page.url }}">{% endif %}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <!-- Fonts -->
@@ -41,8 +21,6 @@
   <script>
     (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
   </script>
-
-  {% if structuredData %}{{ structuredData | safe }}{% endif %}
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -56,12 +34,12 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="/" class="nav-link"{% if activeNav == "home" %} aria-current="page"{% endif %}>Home</a></li>
-          <li><a href="/about.html" class="nav-link"{% if activeNav == "about" %} aria-current="page"{% endif %}>About</a></li>
-          <li><a href="/things-to-do.html" class="nav-link"{% if activeNav == "things-to-do" %} aria-current="page"{% endif %}>Things To Do</a></li>
-          <li><a href="/visitor-info.html" class="nav-link"{% if activeNav == "visitor-info" %} aria-current="page"{% endif %}>Visitor Info</a></li>
-          <li><a href="/local-life.html" class="nav-link"{% if activeNav == "local-life" %} aria-current="page"{% endif %}>Local Life</a></li>
-          <li><a href="/events.html" class="nav-link"{% if activeNav == "events" %} aria-current="page"{% endif %}>Events</a></li>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/things-to-do.html" class="nav-link">Things To Do</a></li>
+          <li><a href="/visitor-info.html" class="nav-link">Visitor Info</a></li>
+          <li><a href="/local-life.html" class="nav-link">Local Life</a></li>
+          <li><a href="/events.html" class="nav-link">Events</a></li>
         </ul>
       </nav>
 
@@ -84,7 +62,14 @@
   </header>
 
   <main id="main-content">
-    {{ content | safe }}
+
+    <div class="page-404">
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+      <p>Sorry, we couldn't find the page you're looking for. It may have been moved or no longer exists. Perhaps you'd like to head back to the homepage and explore from there?</p>
+      <a href="/" class="btn btn--primary">Back to Homepage</a>
+    </div>
+
   </main>
 
   <!-- Footer -->
@@ -93,7 +78,7 @@
       <div class="footer-grid">
         <div class="footer-about">
           <h3>Newark-on-Trent</h3>
-          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside.{% if not is404 %} This community website aims to be your go-to guide for everything Newark.{% endif %}</p>
+          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside.</p>
         </div>
         <div class="footer-links">
           <h4>Explore</h4>
@@ -118,7 +103,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved.{% if not is404 %} This is a community information website.{% endif %}</p>
+        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved.</p>
       </div>
     </div>
   </footer>
