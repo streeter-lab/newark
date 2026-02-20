@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://newark-on-trent.com/sitemap.xml
