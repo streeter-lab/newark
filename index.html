@@ -1,17 +1,43 @@
----
-layout: base.njk
-title: "Newark-on-Trent — Historic Market Town in Nottinghamshire"
-description: "Discover Newark-on-Trent, a historic market town in Nottinghamshire, England. Explore the castle, vibrant market, local events, and community life on the River Trent."
-keywords: "Newark-on-Trent, Nottinghamshire, market town, Newark Castle, Civil War, River Trent, visitor guide"
-ogTitle: "Newark-on-Trent — Historic Market Town in Nottinghamshire"
-ogDescription: "Discover Newark-on-Trent, a historic market town in Nottinghamshire. Explore the castle, vibrant market, local events, and community life."
-ogImageAlt: "Newark Castle overlooking the River Trent"
-canonical: "/"
-activeNav: "home"
-twitterTitle: "Newark-on-Trent — Historic Market Town in Nottinghamshire"
-twitterDescription: "Discover Newark-on-Trent, a historic market town in Nottinghamshire. Explore the castle, vibrant market, local events, and community life."
-permalink: /index.html
-structuredData: |
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Newark-on-Trent, a historic market town in Nottinghamshire, England. Explore the castle, vibrant market, local events, and community life on the River Trent.">
+  <meta name="keywords" content="Newark-on-Trent, Nottinghamshire, market town, Newark Castle, Civil War, River Trent, visitor guide">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Newark-on-Trent — Historic Market Town in Nottinghamshire">
+  <meta property="og:description" content="Discover Newark-on-Trent, a historic market town in Nottinghamshire. Explore the castle, vibrant market, local events, and community life.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://newark-on-trent.com/">
+  <meta property="og:image" content="https://newark-on-trent.com/images/og-image.svg">
+  <meta property="og:image:alt" content="Newark Castle overlooking the River Trent">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Newark-on-Trent">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Newark-on-Trent — Historic Market Town in Nottinghamshire">
+  <meta name="twitter:description" content="Discover Newark-on-Trent, a historic market town in Nottinghamshire. Explore the castle, vibrant market, local events, and community life.">
+
+  <title>Newark-on-Trent — Historic Market Town in Nottinghamshire</title>
+
+  <link rel="canonical" href="https://newark-on-trent.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,32 +65,52 @@ structuredData: |
     }
   }
   </script>
----
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Newark-on-Trent — Home">
+        <span class="logo-text">Newark<span class="logo-accent">-on-Trent</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link" aria-current="page">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/things-to-do.html" class="nav-link">Things To Do</a></li>
+          <li><a href="/visitor-info.html" class="nav-link">Visitor Info</a></li>
+          <li><a href="/local-life.html" class="nav-link">Local Life</a></li>
+          <li><a href="/events.html" class="nav-link">Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
 
     <!-- Hero Section -->
     <section class="hero hero--large">
       <div class="hero__background">
-        <div class="image-placeholder" role="img" aria-label="Newark Castle ruins overlooking the River Trent on a sunny day">
-          <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <rect width="1200" height="600" fill="#b09d84"/>
-            <rect y="380" width="1200" height="220" fill="#86efac" opacity="0.3"/>
-            <rect y="460" width="1200" height="140" fill="#60a5fa" opacity="0.2"/>
-            <g opacity="0.6">
-              <rect x="440" y="180" width="160" height="200" fill="#9a8468"/>
-              <rect x="610" y="220" width="120" height="160" fill="#9a8468"/>
-              <rect x="420" y="170" width="16" height="40" fill="#9a8468"/>
-              <rect x="580" y="170" width="16" height="40" fill="#9a8468"/>
-              <rect x="416" y="162" width="24" height="14" fill="#9a8468"/>
-              <rect x="576" y="162" width="24" height="14" fill="#9a8468"/>
-              <rect x="460" y="210" width="30" height="50" rx="15" fill="#b09d84"/>
-              <rect x="520" y="210" width="30" height="50" rx="15" fill="#b09d84"/>
-              <rect x="490" y="300" width="40" height="80" fill="#b09d84"/>
-              <rect x="630" y="250" width="25" height="40" rx="12" fill="#b09d84"/>
-              <rect x="680" y="250" width="25" height="40" rx="12" fill="#b09d84"/>
-            </g>
-            <text x="600" y="520" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">Newark Castle &amp; River Trent</text>
-          </svg>
-        </div>
+        <img src="/images/placeholder.jpg" alt="Newark Castle ruins overlooking the River Trent on a sunny day" class="hero__image">
       </div>
       <div class="container hero__content">
         <h1>Welcome to Newark-on-Trent</h1>
@@ -123,19 +169,7 @@ structuredData: |
       <div class="container">
         <div class="feature-split">
           <div class="feature-split__image">
-            <div class="image-placeholder" role="img" aria-label="The cobbled Market Square in Newark-on-Trent with historic buildings">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <rect width="600" height="400" fill="#e0d8cc"/>
-                <g opacity="0.4">
-                  <rect x="80" y="120" width="100" height="180" fill="#c9bda8"/>
-                  <rect x="200" y="100" width="120" height="200" fill="#c9bda8"/>
-                  <rect x="340" y="130" width="100" height="170" fill="#c9bda8"/>
-                  <rect x="460" y="110" width="80" height="190" fill="#c9bda8"/>
-                  <rect x="80" y="300" width="460" height="20" fill="#b09d84"/>
-                </g>
-                <text x="300" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9a8468">Newark Market Square</text>
-              </svg>
-            </div>
+            <img src="/images/placeholder.jpg" alt="The cobbled Market Square in Newark-on-Trent with historic buildings">
           </div>
           <div class="feature-split__content">
             <h2>A Town Steeped in History</h2>
@@ -157,14 +191,7 @@ structuredData: |
 
         <div class="grid grid--3">
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Stalls at the Newark International Antiques Fair">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#e0d8cc"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9a8468">Antiques Fair</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Stalls at the Newark International Antiques Fair" class="card__image">
             <div class="card__body">
               <span class="card__badge">Annual Event</span>
               <h3 class="card__title">Newark International Antiques Fair</h3>
@@ -177,14 +204,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Newark Festival celebrations in the town centre">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#dbeafe"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#2563eb">Newark Festival</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Newark Festival celebrations in the town centre" class="card__image">
             <div class="card__body">
               <span class="card__badge">Summer</span>
               <h3 class="card__title">Newark Festival</h3>
@@ -197,14 +217,7 @@ structuredData: |
           </article>
 
           <article class="card">
-            <div class="card__image">
-              <div class="image-placeholder" role="img" aria-label="Christmas Market stalls with festive lights in Newark Market Square">
-                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <rect width="400" height="250" fill="#dcfce7"/>
-                  <text x="200" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#15803d">Christmas Market</text>
-                </svg>
-              </div>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Christmas Market stalls with festive lights in Newark Market Square" class="card__image">
             <div class="card__body">
               <span class="card__badge">Winter</span>
               <h3 class="card__title">Newark Christmas Market</h3>
@@ -234,19 +247,50 @@ structuredData: |
             <a href="/local-life.html" class="btn btn--primary">Discover Local Life</a>
           </div>
           <div class="feature-split__image">
-            <div class="image-placeholder" role="img" aria-label="Riverside walk along the River Trent in Newark with green trees and narrowboats">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <rect width="600" height="400" fill="#dcfce7"/>
-                <rect y="280" width="600" height="120" fill="#bfdbfe" opacity="0.5"/>
-                <g opacity="0.4">
-                  <circle cx="150" cy="180" r="60" fill="#86efac"/>
-                  <circle cx="280" cy="160" r="70" fill="#86efac"/>
-                  <circle cx="420" cy="190" r="55" fill="#86efac"/>
-                </g>
-                <text x="300" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#15803d">River Trent Riverside Walk</text>
-              </svg>
-            </div>
+            <img src="/images/placeholder.jpg" alt="Riverside walk along the River Trent in Newark with green trees and narrowboats">
           </div>
         </div>
       </div>
     </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Newark-on-Trent</h3>
+          <p>A historic market town on the River Trent in Nottinghamshire, steeped in civil war history and surrounded by beautiful countryside. This community website aims to be your go-to guide for everything Newark.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/about.html">About Newark</a></li>
+            <li><a href="/things-to-do.html">Things To Do</a></li>
+            <li><a href="/visitor-info.html">Visitor Info</a></li>
+            <li><a href="/events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="/local-life.html">Local Life</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:admin@newark-on-trent.com">admin@newark-on-trent.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Newark-on-Trent Community. All rights reserved. This is a community information website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

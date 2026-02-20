@@ -1,16 +1,9 @@
 {
   "name": "newark",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Community and visitor information website for Newark-on-Trent, Nottinghamshire",
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "dev": "npx @11ty/eleventy --serve"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
-  }
+  "license": "ISC"
 }

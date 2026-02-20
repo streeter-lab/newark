@@ -122,11 +122,12 @@
   }
 
   /* ------------------------------------------
-     Category Filtering (Things To Do page)
+     Category Filtering (reusable for any page
+     with .filterable-card elements)
      ------------------------------------------ */
   function initCategoryFilter() {
     const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.attraction-card');
+    const cards = document.querySelectorAll('.filterable-card');
     if (buttons.length === 0 || cards.length === 0) return;
 
     buttons.forEach(button => {
