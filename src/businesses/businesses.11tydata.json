@@ -1,0 +1,5 @@
+{
+  "layout": "business.njk",
+  "tags": "business",
+  "permalink": "/businesses/{{ page.fileSlug }}/"
+}

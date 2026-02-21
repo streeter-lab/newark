@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: News & Noticeboard
+description: Latest news and community notices for Newark-on-Trent
+tags: []
+eleventyExcludeFromCollections: true
+permalink: /news/
+---
+<h1>News &amp; Noticeboard</h1>
+<p>The latest news and community notices from Newark-on-Trent.</p>
+
+<div class="card-grid">
+  {% for post in collections.news | sortByDate %}
+  <article class="card">
+    {% if post.data.photo %}
+    <div class="card-image">
+      <img src="{{ post.data.photo }}" alt="" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p class="card-meta">{{ post.data.date | dateFormat }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

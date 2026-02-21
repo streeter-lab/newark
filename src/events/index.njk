@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Events
+description: Upcoming events in Newark-on-Trent
+tags: []
+eleventyExcludeFromCollections: true
+permalink: /events/
+---
+<h1>Events</h1>
+<p>Find out what&rsquo;s happening in Newark-on-Trent.</p>
+
+<div class="card-grid">
+  {% for event in collections.event | sortByDateAsc %}
+  <article class="card">
+    {% if event.data.photo %}
+    <div class="card-image">
+      <img src="{{ event.data.photo }}" alt="Photo for {{ event.data.name }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      <h3><a href="{{ event.url }}">{{ event.data.name }}</a></h3>
+      <p class="card-meta">
+        {{ event.data.date | dateFormat }}
+        {% if event.data.location %} &middot; {{ event.data.location }}{% endif %}
+      </p>
+      <p>{{ event.data.description }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

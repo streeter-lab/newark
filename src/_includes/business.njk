@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+<a href="/businesses/" class="back-link">&larr; All Local Businesses</a>
+
+<article class="detail-header">
+  <h1>{{ name }}</h1>
+  {% if category %}<span class="category-tag">{{ category }}</span>{% endif %}
+</article>
+
+{% if photo %}
+<div class="detail-image">
+  <img src="{{ photo }}" alt="Photo of {{ name }}">
+</div>
+{% endif %}
+
+<dl class="business-info">
+  {% if address %}
+  <dt>Address:</dt>
+  <dd>{{ address }}</dd>
+  {% endif %}
+  {% if phone %}
+  <dt>Phone:</dt>
+  <dd>{{ phone }}</dd>
+  {% endif %}
+  {% if website %}
+  <dt>Website:</dt>
+  <dd><a href="{{ website }}" target="_blank" rel="noopener">{{ website }}</a></dd>
+  {% endif %}
+  {% if facebook %}
+  <dt>Facebook:</dt>
+  <dd><a href="{{ facebook }}" target="_blank" rel="noopener">Facebook page</a></dd>
+  {% endif %}
+</dl>
+
+<div class="detail-content">
+  <p>{{ description }}</p>
+  {{ content | safe }}
+</div>

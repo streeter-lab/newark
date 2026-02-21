@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Newark-on-Trent.com</title>
+  <meta name="description" content="{{ description or 'Community website for Newark-on-Trent, Nottinghamshire' }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">Newark-on-Trent.com</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="/businesses/"{% if page.url.startsWith("/businesses/") %} aria-current="page"{% endif %}>Local Businesses</a></li>
+          <li><a href="/events/"{% if page.url.startsWith("/events/") %} aria-current="page"{% endif %}>Events</a></li>
+          <li><a href="/news/"{% if page.url.startsWith("/news/") %} aria-current="page"{% endif %}>News &amp; Noticeboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ page.date.getFullYear() }} Newark-on-Trent.com &mdash; A community website for Newark-on-Trent, Nottinghamshire</p>
+    </div>
+  </footer>
+</body>
+</html>
