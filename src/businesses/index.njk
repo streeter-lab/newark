@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Local Businesses
+description: Discover local businesses in Newark-on-Trent
+tags: []
+eleventyExcludeFromCollections: true
+permalink: /businesses/
+---
+<h1>Local Businesses</h1>
+<p>Discover shops, restaurants, services, and more in Newark-on-Trent.</p>
+
+<div class="card-grid">
+  {% for business in collections.business %}
+  <article class="card">
+    {% if business.data.photo %}
+    <div class="card-image">
+      <img src="{{ business.data.photo }}" alt="Photo of {{ business.data.name }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      {% if business.data.category %}<span class="category-tag">{{ business.data.category }}</span>{% endif %}
+      <h3><a href="{{ business.url }}">{{ business.data.name }}</a></h3>
+      <p>{{ business.data.description }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

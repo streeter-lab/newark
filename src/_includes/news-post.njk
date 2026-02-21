@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<a href="/news/" class="back-link">&larr; All News</a>
+
+<article class="detail-header">
+  <h1>{{ title }}</h1>
+  {% if date %}<p class="detail-meta">{{ date | dateFormat }}</p>{% endif %}
+</article>
+
+{% if photo %}
+<div class="detail-image">
+  <img src="{{ photo }}" alt="">
+</div>
+{% endif %}
+
+<div class="detail-content">
+  {{ content | safe }}
+</div>

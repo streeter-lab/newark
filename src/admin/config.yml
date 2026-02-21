@@ -1,0 +1,61 @@
+backend:
+  name: github
+  repo: streeter-lab/newark
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "businesses"
+    label: "Local Businesses"
+    folder: "src/businesses"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Business Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Pubs & Restaurants"
+          - "Shopping"
+          - "Services"
+          - "Health & Beauty"
+          - "Trades"
+          - "Professional Services"
+          - "Leisure & Entertainment"
+          - "Community & Charity"
+          - "Other"
+      - { label: "Address", name: "address", widget: "string" }
+      - { label: "Phone", name: "phone", widget: "string", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "events"
+    label: "Events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Event Name", name: "name", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "news"
+    label: "News & Noticeboard"
+    folder: "src/news"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }

@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Home
+description: Community website for Newark-on-Trent, Nottinghamshire
+---
+<div class="hero">
+  <h1>Welcome to Newark-on-Trent</h1>
+  <p>Your community website for local businesses, events, and news in Newark-on-Trent, Nottinghamshire.</p>
+</div>
+
+<div class="section-heading">
+  <h2>Local Businesses</h2>
+  <a href="/businesses/">View all &rarr;</a>
+</div>
+<div class="card-grid">
+  {% for business in collections.business | limit(3) %}
+  <article class="card">
+    {% if business.data.photo %}
+    <div class="card-image">
+      <img src="{{ business.data.photo }}" alt="Photo of {{ business.data.name }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      {% if business.data.category %}<span class="category-tag">{{ business.data.category }}</span>{% endif %}
+      <h3><a href="{{ business.url }}">{{ business.data.name }}</a></h3>
+      <p>{{ business.data.description }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+<div class="section-heading">
+  <h2>Upcoming Events</h2>
+  <a href="/events/">View all &rarr;</a>
+</div>
+<div class="card-grid">
+  {% for event in collections.event | sortByDateAsc | limit(3) %}
+  <article class="card">
+    {% if event.data.photo %}
+    <div class="card-image">
+      <img src="{{ event.data.photo }}" alt="Photo for {{ event.data.name }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      <h3><a href="{{ event.url }}">{{ event.data.name }}</a></h3>
+      <p class="card-meta">
+        {{ event.data.date | dateFormat }}
+        {% if event.data.location %} &middot; {{ event.data.location }}{% endif %}
+      </p>
+      <p>{{ event.data.description }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+<div class="section-heading">
+  <h2>News &amp; Noticeboard</h2>
+  <a href="/news/">View all &rarr;</a>
+</div>
+<div class="card-grid">
+  {% for post in collections.news | sortByDate | limit(3) %}
+  <article class="card">
+    {% if post.data.photo %}
+    <div class="card-image">
+      <img src="{{ post.data.photo }}" alt="" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="card-body">
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p class="card-meta">{{ post.data.date | dateFormat }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

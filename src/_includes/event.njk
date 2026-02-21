@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+<a href="/events/" class="back-link">&larr; All Events</a>
+
+<article class="detail-header">
+  <h1>{{ name }}</h1>
+  <p class="detail-meta">
+    {% if date %}{{ date | dateFormat }}{% endif %}
+    {% if location %} &middot; {{ location }}{% endif %}
+  </p>
+</article>
+
+{% if photo %}
+<div class="detail-image">
+  <img src="{{ photo }}" alt="Photo for {{ name }}">
+</div>
+{% endif %}
+
+<div class="detail-content">
+  <p>{{ description }}</p>
+  {{ content | safe }}
+</div>
