@@ -2,6 +2,7 @@ backend:
   name: github
   repo: streeter-lab/newark
   branch: main
+  base_url: https://newark-github-oauth.<your-subdomain>.workers.dev
 
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
