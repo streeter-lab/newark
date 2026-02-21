@@ -82,9 +82,13 @@ Create a new Markdown file in the appropriate folder (`src/businesses/`, `src/ev
 2. Click **Create** and select **Pages** then **Connect to Git**
 3. Select this GitHub repository
 4. Configure the build settings:
+   - **Framework preset:** None
    - **Build command:** `npm install && npm run build`
    - **Build output directory:** `_site`
+   - **Node.js version:** 18 (or set `NODE_VERSION=18` in environment variables)
 5. Click **Save and Deploy**
+
+> **Note:** The build command and output directory must be set in the Cloudflare Pages dashboard, not in `wrangler.toml` (which does not support a `[build]` section for Pages projects). The `wrangler.toml` file is used only for the `pages_build_output_dir` setting.
 
 The site will rebuild automatically on every push to the configured branch.
 
