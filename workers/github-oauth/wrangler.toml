@@ -1,0 +1,12 @@
+name = "newark-github-oauth"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, and
+# ALLOWED_HOST must be set via the Cloudflare dashboard or wrangler CLI.
+# Do NOT commit secrets to this file.
+#
+# Example (non-secret):
+#   wrangler secret put GITHUB_CLIENT_SECRET
+#
+# See DEPLOY.md in this directory for full instructions.
