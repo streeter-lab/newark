@@ -1,0 +1,6 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "newark-on-trent"
+compatibility_date = "2024-01-01"
+
+[pages]
+build_output_dir = "_site"
