@@ -1,7 +1,7 @@
 ---
 title: Community Litter Pick This Weekend
 date: 2026-02-10
-photo: /images/placeholder.jpg
+photo: /images/community-litter-pick.svg
 ---
 
 Volunteers are invited to join a community litter pick along the River Trent path this Saturday morning. Meet at the Riverside Park car park at 10am. Equipment and refreshments will be provided.
