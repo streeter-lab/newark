@@ -4,7 +4,5 @@ description: A unique floating pub and restaurant moored on the River Trent, off
 category: Pubs & Restaurants
 address: Trent Lane, Newark-on-Trent, NG24 1DH
 phone: "01636 123456"
-website: https://example.com
-facebook: https://facebook.com/example
-photo: /images/placeholder.jpg
+photo: /images/the-castle-barge.svg
 ---

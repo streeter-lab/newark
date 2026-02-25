@@ -9,9 +9,22 @@ permalink: /businesses/
 <h1>Local Businesses</h1>
 <p>Discover shops, restaurants, services, and more in Newark-on-Trent.</p>
 
-<div class="card-grid">
+<div class="filter-bar" aria-label="Filter businesses by category">
+  <button class="filter-btn active" data-filter="all">All</button>
+  {% set categories = [] %}
   {% for business in collections.business %}
-  <article class="card">
+    {% if business.data.category and business.data.category not in categories %}
+      {% set categories = (categories.push(business.data.category), categories) %}
+    {% endif %}
+  {% endfor %}
+  {% for cat in categories | sort %}
+  <button class="filter-btn" data-filter="{{ cat }}">{{ cat }}</button>
+  {% endfor %}
+</div>
+
+<div class="card-grid" id="business-grid">
+  {% for business in collections.business %}
+  <article class="card" data-category="{{ business.data.category }}">
     {% if business.data.photo %}
     <div class="card-image">
       <img src="{{ business.data.photo }}" alt="Photo of {{ business.data.name }}" loading="lazy">
@@ -25,3 +38,22 @@ permalink: /businesses/
   </article>
   {% endfor %}
 </div>
+
+<script>
+(function () {
+  var bar = document.querySelector('.filter-bar');
+  if (!bar) return;
+  bar.style.display = 'flex';
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    bar.querySelector('.active').classList.remove('active');
+    btn.classList.add('active');
+    var filter = btn.getAttribute('data-filter');
+    var cards = document.querySelectorAll('#business-grid .card');
+    cards.forEach(function (card) {
+      card.hidden = filter !== 'all' && card.getAttribute('data-category') !== filter;
+    });
+  });
+})();
+</script>

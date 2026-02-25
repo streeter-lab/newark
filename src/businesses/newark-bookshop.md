@@ -4,7 +4,5 @@ description: Independent bookshop in the heart of Newark, stocking a wide range 
 category: Shopping
 address: Market Place, Newark-on-Trent, NG24 1HD
 phone: "01636 654321"
-website: https://example.com
-facebook: https://facebook.com/example
-photo: /images/placeholder.jpg
+photo: /images/newark-bookshop.svg
 ---

@@ -1,7 +1,7 @@
 ---
 title: Town Centre Improvement Works Announced
 date: 2026-02-15
-photo: /images/placeholder.jpg
+photo: /images/town-centre-improvements.svg
 ---
 
 Newark & Sherwood District Council has announced a programme of improvement works for the town centre, including new paving on Middle Gate and enhanced seating areas around the Market Place.
