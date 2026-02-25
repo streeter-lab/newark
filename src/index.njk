@@ -34,7 +34,7 @@ description: Community website for Newark-on-Trent, Nottinghamshire
   <a href="/events/">View all &rarr;</a>
 </div>
 <div class="card-grid">
-  {% for event in collections.event | sortByDateAsc | limit(3) %}
+  {% for event in collections.event | futureEvents | sortByDateAsc | limit(3) %}
   <article class="card">
     {% if event.data.photo %}
     <div class="card-image">
@@ -62,7 +62,7 @@ description: Community website for Newark-on-Trent, Nottinghamshire
   <article class="card">
     {% if post.data.photo %}
     <div class="card-image">
-      <img src="{{ post.data.photo }}" alt="" loading="lazy">
+      <img src="{{ post.data.photo }}" alt="{{ post.data.title }}" loading="lazy">
     </div>
     {% endif %}
     <div class="card-body">

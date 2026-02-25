@@ -94,14 +94,7 @@ The site will rebuild automatically on every push to the configured branch.
 
 ### Setting up Decap CMS authentication
 
-For the CMS admin interface to work, you need to register a GitHub OAuth application:
-
-1. Go to GitHub **Settings > Developer settings > OAuth Apps > New OAuth App**
-2. Set the **Authorization callback URL** to `https://api.netlify.com/auth/done`
-3. Note the **Client ID** and **Client Secret**
-4. In Netlify (used only for auth), create a site and go to **Site settings > Access control > OAuth** and add a GitHub provider with your Client ID and Secret
-
-Alternatively, you can configure Decap CMS to use the `git-gateway` backend or a custom OAuth provider compatible with Cloudflare Pages.
+The CMS uses a custom Cloudflare Worker to handle GitHub OAuth. See [`workers/github-oauth/DEPLOY.md`](workers/github-oauth/DEPLOY.md) for full setup instructions.
 
 ## Building for production
 

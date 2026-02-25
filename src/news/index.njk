@@ -14,7 +14,7 @@ permalink: /news/
   <article class="card">
     {% if post.data.photo %}
     <div class="card-image">
-      <img src="{{ post.data.photo }}" alt="" loading="lazy">
+      <img src="{{ post.data.photo }}" alt="{{ post.data.title }}" loading="lazy">
     </div>
     {% endif %}
     <div class="card-body">
